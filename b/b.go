@@ -23,7 +23,8 @@ type Order struct {
 }
 
 func NewOrder() Order {
-	return Order{ID: uuid.NewV4()}
+	u := uuid.Must(uuid.NewV4())
+	return Order{ID: u}
 }
 
 const (
